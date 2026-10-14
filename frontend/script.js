@@ -1,4 +1,4 @@
-﻿const API_URL = "http://localhost:5000/api/students";
+﻿const API_URL = "https://student-management-system-9fyw.onrender.com/api/students";
 
 const form = document.getElementById("studentForm");
 const table = document.getElementById("studentTable");
