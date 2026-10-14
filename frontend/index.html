@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">StudentHub</div>
+        <span>Student Information Management System</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">DASHBOARD</p>
+                <h1>Student Management</h1>
+                <p>Manage student records in one place.</p>
+            </div>
+            <div class="stat-card">
+                <span>Total Students</span>
+                <strong id="totalStudents">0</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2 id="formTitle">Add New Student</h2>
+            <form id="studentForm">
+                <input type="hidden" id="studentId">
+                <div class="form-grid">
+                    <label>Full Name<input id="name" required placeholder="Enter full name"></label>
+                    <label>Roll Number<input id="rollNumber" required placeholder="e.g. CA201"></label>
+                    <label>Email Address<input id="email" type="email" required placeholder="student@example.com"></label>
+                    <label>Course<input id="course" required placeholder="e.g. Computer Engineering"></label>
+                    <label>Year<select id="year" required>
+                        <option value="">Select year</option>
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                        <option value="5">Fifth Year</option>
+                        <option value="6">Sixth Year</option>
+                    </select></label>
+                    <label>Phone Number (optional)<input id="phone" placeholder="Enter phone number"></label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="saveBtn">Add Student</button>
+                    <button type="button" id="cancelBtn" class="secondary" hidden>Cancel Edit</button>
+                </div>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="list-heading">
+                <div><h2>Student Records</h2><p>All registered students</p></div>
+                <input id="searchInput" placeholder="Search students..." aria-label="Search students">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Student</th><th>Roll No.</th><th>Course</th><th>Year</th><th>Actions</th></tr></thead>
+                    <tbody id="studentTable"><tr><td colspan="5">Loading students...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+        <footer>StudentHub | Student Information Management System</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
